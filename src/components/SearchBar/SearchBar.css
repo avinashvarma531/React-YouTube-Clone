@@ -1,0 +1,50 @@
+.navbar{
+    background-color: #202020;
+    height: 56px;
+    position: relative;
+}
+
+.logo{
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-40%);
+}
+
+.logo img{
+    width: 90px;
+}
+
+.searchForm{
+    width: 40%;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.searchForm input{
+    background: #121212;
+    color: rgba(255, 255, 255, 0.88);
+    flex-basis: 90%;
+    height: 100%;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.searchForm button{
+    background: #313131;
+    border: none;
+    outline: none;
+    flex-basis: 10%;
+    height: 100%;
+    color: #717171;
+    cursor: pointer;
+}
