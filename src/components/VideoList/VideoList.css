@@ -1,0 +1,38 @@
+/* .video-list-container{} */
+
+.video-item{
+    display: flex;
+    margin: 5px auto;
+}
+
+.thumbnail-container{
+    /* width: 168px;
+    height: 94px; */
+    /* background: red; */
+    display: inline-block;
+    cursor: pointer;
+}
+
+.thumbnail{
+    /* width: 168px;
+    height: 94px; */
+}
+
+.side-content{
+    /* background: blue; */
+    width: fit-content;
+    margin-left: 10px;
+}
+
+.video-title{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.video-meta > div{
+    font-size: 13px;
+    color: #AAAAAA;
+}

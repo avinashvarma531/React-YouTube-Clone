@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #181818;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    width: 8px;
+    background: #AAAAAA;
+    border-radius: 10px;
+}
+
+/* END SEARCH BAR */
+
+
+.content{
+    /* background: green; */
+    margin: 2rem auto;
+    width: 85%;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-column-gap: 20px;
+}
+
+/* VIDEO SHOW */
+.video-show{
+    /* background: red; */
+}
+
+/* VIDEO LIST */
+.video-list{
+    /* background: blue; */
+}
+
+@media only screen and (max-width: 768px){
+    .content{
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    .video-list{
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 2px solid #444444;
+    }
+}
