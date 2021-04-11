@@ -11,11 +11,6 @@ function App() {
 
     const BASE_URL = "https://www.googleapis.com/youtube/v3/search"
 
-    // useEffect(() => {
-    //     console.log(videoList);
-    //     console.log(video);
-    // })
-
     useEffect(() => {
         OnTermChange("");
     }, [])
@@ -41,7 +36,6 @@ function App() {
     }
 
     const onVideoChange = video => {
-        // console.log(video.snippet.title);
         const req = async () => {
             return await axios.get(BASE_URL, {
                 params: {
@@ -53,20 +47,11 @@ function App() {
                 }
             })
         }
-        
-        const videoDetails = async () => {
-            return await axios.get(BASE_URL, {
-                params: {
-                    key: "AIzaSyAC5-Muq_F29Tljl0fUHh37DQlRXSQIzxA",
-                    part: ["snippet", "statistics"],
-                    id: video.id.videoId,
-                }
-            })
-        }
 
-        req().then(res => setVideoList(res.data.items)).catch(err => console.log(err));
-        
-        videoDetails().then(res => setVideo(res.data.items[0])).catch(err => console.log(err))
+        req().then(res => {
+            setVideoList(res.data.items);
+            setVideo(video);
+        }).catch(err => console.log(err));
     }
 
     return (

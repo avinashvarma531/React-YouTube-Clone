@@ -11,12 +11,6 @@ function VideoShow({ video }) {
 
     
     if (video) {
-        console.log(video);
-        
-        let tags = video.snippet.hasOwnProperty("tags") ?
-            video.snippet.tags.map(tag => <span className="tag" key={tag}>{"#".concat(tag)}</span>) : null;
-        let viewCount = video.hasOwnProperty("statistics") ? video.statistics.viewCount : null;
-        
         return (
             <React.Fragment>
                 <div className="videoWrapper">
@@ -27,12 +21,13 @@ function VideoShow({ video }) {
                     </iframe>;
                 </div>
                 <div className="video-header">
-                    <div className="tags">
+                    {/* <div className="tags">
                         {tags}
-                    </div>
+                    </div> */}
                     <div className="title">{video.snippet.title}</div>
                     <div className="meta">
-                        {viewCount}views &#9679; {getDateFormat(video.snippet.publishTime)}
+                        {/* {viewCount}views &#9679;  */}
+                        {getDateFormat(video.snippet.publishTime)}
                     </div>
                 </div>
                 <div className="video-desc">
