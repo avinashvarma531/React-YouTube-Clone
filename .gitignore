@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+testkey
+testkey.pub
+
 # production
 /build
 
