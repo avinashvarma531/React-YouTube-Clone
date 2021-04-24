@@ -7,6 +7,12 @@ function getDateFormat(dateTime) {
     return date;
 }
 
+const decodeHtml = (html) => {
+    var txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+}
+
 function VideoShow({ video }) {
 
     
@@ -24,7 +30,7 @@ function VideoShow({ video }) {
                     {/* <div className="tags">
                         {tags}
                     </div> */}
-                    <div className="title">{video.snippet.title}</div>
+                    <div className="title">{decodeHtml(video.snippet.title)}</div>
                     <div className="meta">
                         {/* {viewCount}views &#9679;  */}
                         {getDateFormat(video.snippet.publishTime)}

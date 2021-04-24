@@ -55,7 +55,7 @@ function App() {
     }
 
     return (
-        <div className="ui container">
+        <div id="top" className="ui container">
             <SearchBar setSearchTerm={OnTermChange} />
             <div className="content">
                 <div className="video-show">

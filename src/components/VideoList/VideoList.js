@@ -61,7 +61,14 @@ function get_date(dateTime) {
     return `${time} ${context} ago`;
 }
 
-function titleOptim(title) {
+const decodeHtml = (html) => {
+    var txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+}
+
+function titleOptim(video_title) {
+    let title = decodeHtml(video_title);
     if (title.length > 50){
         title = title.slice(0, 50) + "...";
     }
